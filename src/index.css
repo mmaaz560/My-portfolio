@@ -1,0 +1,21 @@
+@import "tailwindcss";
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #080d19;
+    color: #f8fafc;
+    font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+::selection {
+    background: #7c3aed;
+    color: white;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
