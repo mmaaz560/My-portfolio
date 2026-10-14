@@ -18,8 +18,12 @@ import {
   FaBars,
   FaTimes,
   FaCode,
+  FaCamera,
+  FaShoppingBag,
+  FaYoutube,
+  FaBriefcase,
 } from "react-icons/fa";
-import mypic from "./assets/mypic.png";
+import mypic2 from "./assets/mypic2.png";
 import hero from "./assets/hero.png";
 
 import {
@@ -41,41 +45,79 @@ const skills = [
   { name: "Git & GitHub", icon: <FaGitAlt />, color: "text-orange-400", category: "Tools" },
 ];
 
+
 const projects = [
   {
     number: "01",
     title: "Instagram Clone",
     description:
-      "A social media application featuring a familiar Instagram-style interface, stories, posts and a responsive layout.",
-    tags: ["React", "Node.js", "MongoDB"],
+      "An Instagram-inspired social media application featuring user authentication, posts, image uploads, stories, and an interactive interface.",
+    tags: ["React", "Node.js", "Express", "MongoDB"],
+    github: "https://github.com/mmaaz560/instagram",
+        live: "https://your-arsha-website.vercel.app",
+
+    gradient: "from-pink-500/30 to-purple-600/30",
     icon: <FaInstagram />,
-    gradient: "from-pink-600/30 via-purple-600/20 to-orange-500/20",
-    github: "https://github.com/mmaaz560",
-    demo: "",
   },
   {
     number: "02",
-    title: "E-Commerce Website",
+    title: "Photofolio",
     description:
-      "An online shopping interface with product listings, product details, cart functionality and an admin panel project.",
-    tags: ["React", "Tailwind CSS", "Express.js"],
-    icon: <FaCode />,
-    gradient: "from-cyan-500/30 via-blue-600/20 to-purple-500/20",
-    github: "https://github.com/mmaaz560",
-    demo: "",
+      "A responsive photography portfolio website with a modern gallery layout, reusable components, and an elegant user interface.",
+    tags: ["React", "Tailwind CSS", "JavaScript"],
+    github: "https://github.com/mmaaz560/Photofolio",
+        live: "https://photofolio-dbu2.vercel.app/",
+
+    gradient: "from-blue-500/30 to-cyan-500/30",
+    icon: <FaCamera />,
   },
   {
     number: "03",
-    title: "Photofolio",
+    title: "E-commerce Website",
     description:
-      "A modern photography portfolio featuring a clean gallery, responsive navigation and an elegant visual layout.",
-    tags: ["React", "CSS", "Responsive UI"],
-    icon: <SiVite />,
-    gradient: "from-violet-500/30 via-fuchsia-500/20 to-blue-500/20",
-    github: "https://github.com/mmaaz560/Photofolio",
-    demo: "",
+      "A modern e-commerce frontend featuring product listings, product detail pages, cart UI, and responsive layouts.",
+    tags: ["React", "Tailwind CSS", "React Router"],
+    github: "https://github.com/mmaaz560/ecommerce",
+        live: "https://ecommerce-five-ruby-89.vercel.app",
+
+    gradient: "from-orange-500/30 to-pink-500/30",
+    icon: <FaShoppingBag />,
+  },
+  {
+    number: "04",
+    title: "YouTube Clone",
+    description:
+      "A YouTube-inspired video application built to explore video uploads, thumbnails, playlists, and comment functionality.",
+    tags: ["Laravel", "PHP", "MySQL", "JavaScript"],
+    github: "https://github.com/mmaaz560/youtube",
+        live: "https://your-arsha-website.vercel.app",
+
+    gradient: "from-red-500/30 to-orange-500/30",
+    icon: <FaYoutube />,
+  },
+  {
+    number: "05",
+    title: "Arsha Website",
+    description:
+      "A responsive business website inspired by the Arsha template, with clean sections and a professional layout.",
+    tags: ["HTML", "CSS", "Bootstrap", "JavaScript"],
+    github: "https://github.com/mmaaz560/arsha",
+    live: "https://arsha-coral-nine.vercel.app/",
+    gradient: "from-cyan-500/30 to-blue-600/30",
+    icon: <FaBriefcase />,
+  },
+  {
+    number: "06",
+    title: "More Projects",
+    description:
+      "Explore my GitHub profile to discover more web development experiments, practice projects, and ongoing work.",
+    tags: ["Web Development", "React", "JavaScript"],
+    github: "https://github.com/mmaaz560",
+    gradient: "from-violet-500/30 to-indigo-600/30",
+    icon: <FaCode />,
   },
 ];
+
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -243,7 +285,7 @@ function App() {
 
     {/* Your picture */}
     <img
-      src={mypic}
+      src={mypic2}
       alt="Muhammad Maaz"
       className="mb-5 h-40 w-40 rounded-full border-4 border-violet-400/50 object-cover shadow-xl shadow-violet-900/40 sm:h-48 sm:w-48"
     />
@@ -367,7 +409,7 @@ function App() {
         {/* Projects */}
         <section id="projects" className="border-y border-white/5 bg-[#0c1221] py-24">
           <div className="mx-auto max-w-6xl px-5 lg:px-8">
-            <SectionTitle eyebrow="Things I've been building" title="Featured" accent="Projects" />
+            <SectionTitle eyebrow="Things I've been building" title="My " accent="Creations" />
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {projects.map((project) => (
@@ -404,16 +446,31 @@ function App() {
                       ))}
                     </div>
 
-                    <div className="mt-6 border-t border-white/10 pt-5">
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-violet-300 transition hover:text-blue-300"
-                      >
-                        <FaGithub /> View on GitHub <FaExternalLinkAlt className="text-xs" />
-                      </a>
-                    </div>
+                   
+<div className="flex flex-wrap gap-3 mt-5">
+  <a
+    href={project.github}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 rounded-lg border border-white/20 px-4 py-2 text-sm transition hover:bg-white/10"
+  >
+    <FaGithub />
+    GitHub
+  </a>
+
+  {project.live && (
+    <a
+      href={project.live}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm text-white transition hover:bg-blue-700"
+    >
+      <FaExternalLinkAlt />
+      Live Website
+    </a>
+  )}
+</div>
+
                   </div>
                 </article>
               ))}
