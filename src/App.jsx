@@ -490,7 +490,7 @@ function App() {
               </p>
 
               <a
-                href="mailto:maaz.ibrahim@gmail.com"
+                href="mailto:maazibrahim560@gmail.com"
                 className="mt-8 inline-flex items-center gap-4 rounded-2xl border border-white/10 bg-white/0.03 p-5 transition hover:border-violet-400/40"
               >
                 <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-violet-500/15 text-xl text-violet-300">
@@ -515,7 +515,7 @@ function App() {
                   `Name: ${data.get("name")}\nEmail: ${data.get("email")}\n\n${data.get("message")}`
                 );
                 window.location.href =
-                  `mailto:maaz.ibrahim@gmail.com?subject=${subject}&body=${body}`;
+                  `mailto:maazibrahim560@gmail.com?subject=${subject}&body=${body}`;
               }}
               className="space-y-5 rounded-2xl border border-white/10 bg-white/0.025 p-6 sm:p-8"
             >
