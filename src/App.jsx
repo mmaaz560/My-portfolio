@@ -498,7 +498,7 @@ function App() {
                 </span>
                 <span>
                   <span className="block text-sm text-slate-400">Email me</span>
-                  <span className="mt-1 block font-medium">maaz.ibrahim@gmail.com</span>
+                  <span className="mt-1 block font-medium">maazibrahim560@gmail.com</span>
                 </span>
               </a>
             </div>
