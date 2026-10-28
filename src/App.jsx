@@ -603,7 +603,7 @@ function App() {
                     <FaEnvelope /> Email Me
                   </a>
                   <a
-                    href="/resume.pdf"
+                    href="/myresume.pdf"
                     download
                     className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-3 font-semibold transition hover:border-violet-400 hover:bg-violet-400/5"
                   >
